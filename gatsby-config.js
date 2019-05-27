@@ -1,3 +1,4 @@
+console.log(process.env.NODE_ENV, process.env.SITE_URL)
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -30,7 +31,6 @@ module.exports = {
   },
   pathPrefix: '/',
   plugins: [
-    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

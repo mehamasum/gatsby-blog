@@ -132,6 +132,21 @@ class Index extends React.Component {
                 <div className="bio-section">
                   <div>
                     <div className="preference-label">
+                      <span>My interests</span>
+                    </div>
+                    <div>
+                      <span className="post-tag interest-tag">running</span>
+                      <span className="post-tag interest-tag">fresh-food</span>
+                      <span className="post-tag interest-tag">pop music</span>
+                      <span className="post-tag interest-tag">tv series</span>
+                      <span className="post-tag interest-tag">travel</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bio-section">
+                  <div>
+                    <div className="preference-label">
                       <span>I want to work with</span>
                     </div>
                     <div>
@@ -149,21 +164,6 @@ class Index extends React.Component {
                       <div>
                         <span className="post-tag disliked-tag">android</span>
                         <span className="post-tag disliked-tag">jquery</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="bio-section">
-                    <div>
-                      <div className="preference-label">
-                        <span>My interests</span>
-                      </div>
-                      <div>
-                        <span className="post-tag interest-tag">salad</span>
-                        <span className="post-tag interest-tag">workout</span>
-                        <span className="post-tag interest-tag">pop music</span>
-                        <span className="post-tag interest-tag">tv series</span>
-                        <span className="post-tag interest-tag">travel</span>
                       </div>
                     </div>
                   </div>
@@ -287,6 +287,7 @@ class Index extends React.Component {
                   {projects.map((project, index) => {
                     return (
                       <Col
+                        id={project.hash}
                         key={project.hash}
                         xs={12}
                         md={6}
