@@ -77,7 +77,7 @@ class BlogPostTemplate extends React.Component {
           </div>
         </div>
 
-        <div style={{ fontSize: '1.2em' }}>
+        <div style={{ fontSize: '1.2em', lineHeight: '1.5em' }}>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </div>
 
