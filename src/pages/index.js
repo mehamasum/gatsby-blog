@@ -2,6 +2,8 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { Row, Col } from 'react-bootstrap'
 import SEO from '../components/seo/SEO'
+import Navbar from '../components/layouts/Navbar'
+
 import avatar from '../assets/images/avatar.jpg'
 import '../styles/portfolio.scss'
 
@@ -21,16 +23,7 @@ class Index extends React.Component {
           pathname={this.props.location.pathname}
         />
 
-        <header>
-          <Link
-            to="/resume/"
-            className="print"
-            aria-label="Printable Resume"
-            title="Printable Resume"
-          >
-            <i aria-hidden="true" className="fa fa-print" />
-          </Link>
-        </header>
+        <Navbar location={this.props.location} />
 
         <main className="indexRoot container">
           <Row>
@@ -65,7 +58,7 @@ class Index extends React.Component {
                   </span>
                 </div>
 
-                <p>
+                <div style={{ margin: '2em 0' }}>
                   <div aria-hidden="true">
                     <i
                       aria-hidden="true"
@@ -97,7 +90,7 @@ class Index extends React.Component {
                       />
                     </a>
                   </div>
-                </p>
+                </div>
 
                 <div style={{ margin: '2em 0 1em 0' }}>
                   <a
@@ -120,10 +113,6 @@ class Index extends React.Component {
                   >
                     <i aria-hidden="true" className="fa social fa-linkedin" />
                   </a>
-
-                  <Link to="/blog" title="Blog Posts">
-                    <i aria-hidden="true" className="fa social fa-rss" />
-                  </Link>
                 </div>
               </section>
             </Col>
@@ -139,6 +128,21 @@ class Index extends React.Component {
                   get it done’.
                   <br />
                 </p>
+
+                <div className="bio-section">
+                  <div>
+                    <div className="preference-label">
+                      <span>My interests</span>
+                    </div>
+                    <div>
+                      <span className="post-tag interest-tag">running</span>
+                      <span className="post-tag interest-tag">fresh-food</span>
+                      <span className="post-tag interest-tag">pop music</span>
+                      <span className="post-tag interest-tag">tv series</span>
+                      <span className="post-tag interest-tag">travel</span>
+                    </div>
+                  </div>
+                </div>
 
                 <div className="bio-section">
                   <div>
@@ -283,6 +287,7 @@ class Index extends React.Component {
                   {projects.map((project, index) => {
                     return (
                       <Col
+                        id={project.hash}
                         key={project.hash}
                         xs={12}
                         md={6}

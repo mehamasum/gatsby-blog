@@ -1,0 +1,17 @@
+[
+    {
+        "name": "ফুলস্ট্যাক একাডেমি",
+        "hash": "fullstack_ac",
+        "lang": "Bengali",
+        "wip": true,
+        "year": 2021,
+        "cover": "/images/books/template.jpeg",
+        "tags": [
+            "react",
+            "javascript",
+            "python",
+            "django"
+        ],
+        "description": "Learn the basics of back- and front-end engineering to become a professional software developer. First part will cover basics of Javascript and ReactJS while the second book will cover basics of Python and Django."
+    }
+]
