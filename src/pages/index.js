@@ -48,13 +48,10 @@ class Index extends React.Component {
                 </h1>
 
                 <div>
-                  <span
-                    style={{
-                      fontSize: '1.1em',
-                    }}
-                  >
+                  <span>
                     {'Software Engineer at '}
-                    <a href="http://codemarshal.com">CodeMarshal</a>
+                    <br />
+                    <a href="http://newscred.com">Newscred</a>
                   </span>
                 </div>
 
@@ -168,12 +165,33 @@ class Index extends React.Component {
                     </div>
                   </div>
                 </div>
-              </section>
 
-              <hr />
+                <hr />
+              </section>
 
               <section className="resume-section">
                 <h1>Work</h1>
+                <article>
+                  <header>
+                    <h1>Software Engineer</h1>
+                    <span>
+                      <a href="https://newscred.com">Newscred</a>
+                    </span>
+                    <span>
+                      <address>Dhaka, Bangladesh</address>
+                      <time>Since August 2019</time>
+                    </span>
+                  </header>
+                  <section>
+                    Recently started a new journey as a full-stack engineer in
+                    developing the{' '}
+                    <a href="https://get.newscred.com/gartner-mq-cmp-2019/">
+                      world's leading content marketing platform
+                    </a>
+                    !
+                  </section>
+                </article>
+
                 <article>
                   <header>
                     <h1>Software Engineer</h1>
@@ -182,7 +200,7 @@ class Index extends React.Component {
                     </span>
                     <span>
                       <address>Dhaka, Bangladesh</address>
-                      <time>Since Feb 2018</time>
+                      <time>Feb 2018 to July 2019</time>
                     </span>
                   </header>
                   <section>
@@ -190,7 +208,24 @@ class Index extends React.Component {
                     <a href="http://demo.ronangon.com">Ronangon</a> platform.
                     Developed a web based gaming environment with ReactJS, Redux
                     and PixiJS. Implemented messaging backend from scratch with
-                    Django, Django-channels.
+                    Django, Django-channels. Additionally:
+                    <ul>
+                      <li>
+                        Created a shared component library used by multiple
+                        projects, showcased by a style guide app, added tests,
+                        prepared documentation, built CI/CD pipeline to publish
+                        as private NPM package
+                      </li>
+                      <li>
+                        Contributed in building a library of reusable Django
+                        apps, added tests, prepared documentation, built CI/CD
+                        pipeline to publish as private PyPi package
+                      </li>
+                      <li>
+                        Created boilerplate for easy bootstrapping of a new
+                        Codemarshal product, added test and CI/CD setup
+                      </li>
+                    </ul>
                   </section>
 
                   <footer>
@@ -201,6 +236,8 @@ class Index extends React.Component {
                       <span className="post-tag">redux</span>
                       <span className="post-tag">pixi</span>
                       <span className="post-tag">postgresql</span>
+                      <span className="post-tag">celery</span>
+                      <span className="post-tag">redis</span>
                     </div>
                   </footer>
                 </article>
@@ -321,7 +358,7 @@ class Index extends React.Component {
                               <time>{project.year}</time>
                             </span>
                           </header>
-                          <section>
+                          <div>
                             {project.description}
 
                             <div style={{ marginTop: '0.5em' }}>
@@ -334,7 +371,7 @@ class Index extends React.Component {
                                 </span>
                               ))}
                             </div>
-                          </section>
+                          </div>
                         </article>
                       </Col>
                     )
