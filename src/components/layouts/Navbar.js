@@ -15,11 +15,6 @@ const links = [
     icon: 'fa-rss',
   },
   {
-    to: '/books',
-    title: 'Books',
-    icon: 'fa-book',
-  },
-  {
     to: '/resume',
     title: 'Resume',
     icon: 'fa-print',

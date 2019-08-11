@@ -259,6 +259,6 @@ Output:
 
 ---
 
-> Adapted from an [ongoing book](https://mehamasum.github.io/books) of the writer
+> Adapted from an [ongoing book](/books) of the writer
 
 ---

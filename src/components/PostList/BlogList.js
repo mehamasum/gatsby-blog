@@ -101,31 +101,6 @@ class BlogList extends React.Component {
                           activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
                         />
                       </div>
-                      <h1
-                        style={{
-                          fontSize: '2.5em',
-                        }}
-                      >
-                        {' '}
-                        {this.props.blogroot ? (
-                          <div>
-                            {'<Learning in'}
-                            <br />
-                            {'public/>'}
-                          </div>
-                        ) : (
-                          <Link to="/blog" style={{ color: 'inherit' }}>
-                            {'<Learning in'}
-                            <br />
-                            {'public/>'}
-                          </Link>
-                        )}
-                      </h1>
-                      <h3>
-                        Personal Blog by <Link to="/">Meha Masum</Link>
-                      </h3>
-
-                      <hr />
 
                       <AllCategories />
                       <hr />
@@ -162,7 +137,7 @@ class BlogList extends React.Component {
                               <article
                                 key={post.node.id}
                                 style={{
-                                  marginBottom: '1em',
+                                  margin: '0 0 4em 0',
                                 }}
                               >
                                 <PostSummary post={post.node} />
