@@ -21,7 +21,13 @@ class Layout extends React.Component {
             <SEO />
             <GlobalStyle theme={theme} />
             <CodeStyle theme={theme} />
-            <Navbar location={this.props.location} />
+            <Navbar
+              location={this.props.location}
+              style={{
+                background: theme.primary.background,
+                color: theme.primary.text.normal,
+              }}
+            />
 
             <div
               className="indexRoot"
@@ -34,28 +40,24 @@ class Layout extends React.Component {
               <div>
                 <Row>
                   <Col xs={12} md={3} mdOffset={1} className="stickySidebar">
-                    <div style={{ display: 'none' }}>
-                      <Switch
-                        onColor="#222"
-                        checked={theme.id === 'dark'}
-                        onChange={e => {
-                          setTheme(e ? 'dark' : 'light')
-                        }}
-                        uncheckedIcon={
-                          <Emoji
-                            symbol="☀️"
-                            style={{ lineHeight: '28px', marginLeft: '7px' }}
-                          />
-                        }
-                        checkedIcon={
-                          <Emoji
-                            symbol="🌙"
-                            style={{ lineHeight: '28px', marginLeft: '7px' }}
-                          />
-                        }
-                        boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
-                        activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
-                      />
+                    <div>
+                      <label>
+                        <Switch
+                          onColor="#7fc4ff"
+                          checked={theme.id === 'dark'}
+                          onChange={e => {
+                            setTheme(e ? 'dark' : 'light')
+                          }}
+                          boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
+                          activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+                          checkedIcon={
+                            <svg height="100%" width="100%" fill="#000000" className="switchIcon" focusable="false" viewBox="0 0 24 24" ariaHidden="true"><path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6c3.31 0 6 2.69 6 6s-2.69 6-6 6z"></path></svg>
+                          }
+                          uncheckedIcon={
+                            <svg height="100%" width="100%" fill="#FFEB3B" className="switchIcon" focusable="false" viewBox="0 0 24 24" ariaHidden="true"><path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm0-10c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"></path></svg>
+                          }
+                        />
+                      </label>
                     </div>
                     {this.props.hideIntro ? null : (
                       <React.Fragment>
