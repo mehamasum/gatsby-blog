@@ -1,19 +1,39 @@
 [
   {
-    "name": "A social gaming platform",
-    "hash": "ronangon",
-    "type": "work",
-    "year": "2018",
+    "name": "Voluntree",
+    "hash": "voluntree",
+    "type": "personal",
+    "year": "2020",
     "url": [
       {
         "title": "Website",
-        "url": "#"
+        "url": "https://devpost.com/software/voluntree-ml"
       }
     ],
-    "description": "An edutainment based analytical skills development platform for young adults",
-    "thumbnail": "/images/projects/ronangon.png",
-    "winner": null,
-    "tags": ["react", "redux", "django", "django-rest-framework", "postgresql"]
+    "description": "Machine Learning based solution to automate volunteer recruiting from social media",
+    "thumbnail": "/images/projects/swv.jpg",
+    "winner": [
+      {
+        "title": "Best Student Software",
+        "platform": "Amazon Raise-up Buildathon",
+        "url": "https://amazonraiseup.devpost.com/"
+      },
+      {
+        "title": "Best Student Software",
+        "platform": "Redis 'Beyond Cache' Hackathon",
+        "url": "https://redisbeyondcache2020.devpost.com/"
+      }
+    ],
+    "tags": [
+      "react",
+      "drf",
+      "celery",
+      "redis-ai",
+      "redis-gears",
+      "tensorflow",
+      "django-channels",
+      "aws"
+    ]
   },
   {
     "name": "Slack with Voice",
@@ -28,11 +48,19 @@
     ],
     "description": "An unofficial skill that connects your Slack workspace with Amazon Echo",
     "thumbnail": "/images/projects/swv.jpg",
-    "winner": {
-      "title": "Best Student Software",
-      "platform": "Alexa Skills Challenge: Life Hacks"
-    },
-    "tags": ["node.js", "aws-lambda", "alexa-skills-kit", "slack-api"]
+    "winner": [
+      {
+        "title": "Best Student Software",
+        "platform": "Alexa Skills Challenge: Life Hacks",
+        "url": "https://alexalifehacks.devpost.com/"
+      }
+    ],
+    "tags": [
+      "node.js",
+      "aws-lambda",
+      "alexa-skills-kit",
+      "slack-api"
+    ]
   },
   {
     "name": "Bear",
@@ -47,11 +75,18 @@
     ],
     "description": "A classroom chat-bot that automates repetitive and time-consuming replies from the Professors",
     "thumbnail": "/images/projects/bear.png",
-    "winner": {
-      "title": "Best Education Software",
-      "platform": "Cisco Spark The Industry Challenge"
-    },
-    "tags": ["node.js", "botkit", "nosql"]
+    "winner": [
+      {
+        "title": "Best Education Software",
+        "platform": "Cisco Spark The Industry Challenge",
+        "url": "https://ciscospark.devpost.com/"
+      }
+    ],
+    "tags": [
+      "node.js",
+      "botkit",
+      "nosql"
+    ]
   },
   {
     "name": "Apprise",
@@ -66,11 +101,20 @@
     ],
     "description": "A Reddit like mobile utility for sharing road safety issues to draw local authority’s attention",
     "thumbnail": "/images/projects/apprise.png",
-    "winner": {
-      "title": "Second Prize",
-      "platform": "Ford Hack and Role Indore"
-    },
-    "tags": ["java", "android", "php", "mysql", "azure"]
+    "winner": [
+      {
+        "title": "Second Prize",
+        "platform": "Ford Hack and Role Indore",
+        "url": "https://hack-indore.devpost.com/"
+      }
+    ],
+    "tags": [
+      "java",
+      "android",
+      "php",
+      "mysql",
+      "azure"
+    ]
   },
   {
     "name": "Rupai",
@@ -90,7 +134,12 @@
     "description": "A web based visual programming editor for interfacing DIY Robotics kits",
     "thumbnail": "/images/projects/rupai.png",
     "winner": null,
-    "tags": ["blockly", "arduino", "raspberry-pi", "python"]
+    "tags": [
+      "blockly",
+      "arduino",
+      "raspberry-pi",
+      "python"
+    ]
   },
   {
     "name": "Draw in Trello",
@@ -106,7 +155,10 @@
     "description": "A lightweight 'in-app' diagram maker plugin for Trello",
     "thumbnail": "/images/projects/draw-in-trello.png",
     "winner": null,
-    "tags": ["vanilla-js", "mxgraph"]
+    "tags": [
+      "vanilla-js",
+      "mxgraph"
+    ]
   },
   {
     "name": "Deal or No Deal",
@@ -142,11 +194,19 @@
     ],
     "description": "A Snapchat like Android application for sharing texts and images that connects nearby users by creating a WiFi Hotspot",
     "thumbnail": "/images/projects/wichat.png",
-    "winner": {
-      "title": "Best Mobile App in java Tools Challenge",
-      "platform": "Microsoft Visual Studio Marketplace Hackfest"
-    },
-    "tags": ["java", "networking", "sockets", "android"]
+    "winner": [
+      {
+        "title": "Best Mobile App in java Tools Challenge",
+        "platform": "Microsoft Visual Studio Marketplace Hackfest",
+        "url": "https://javachallenge.devpost.com/"
+      }
+    ],
+    "tags": [
+      "java",
+      "networking",
+      "sockets",
+      "android"
+    ]
   },
   {
     "name": "LiveHealthy",
@@ -161,11 +221,20 @@
     ],
     "description": "A Web app for Physicians to visualize raw health data synced across multiple devices of the patient",
     "thumbnail": "/images/projects/live-healthy.png",
-    "winner": {
-      "title": "Best Student Software",
-      "platform": "Redhat Code Healthy with OpenShift"
-    },
-    "tags": ["openshift", "php", "mysql", "java", "android"]
+    "winner": [
+      {
+        "title": "Best Student Software",
+        "platform": "Redhat Code Healthy with OpenShift",
+        "url": "https://openshift.devpost.com/"
+      }
+    ],
+    "tags": [
+      "openshift",
+      "php",
+      "mysql",
+      "java",
+      "android"
+    ]
   },
   {
     "name": "OverDrive",
@@ -181,7 +250,12 @@
     "description": "A DropBox like file hosting and sharing web app intended for local networks (i.e. lab/classroom)",
     "thumbnail": "/images/projects/overdrive.png",
     "winner": null,
-    "tags": ["c", "c++", "poco", "vanilla-js"]
+    "tags": [
+      "c",
+      "c++",
+      "poco",
+      "vanilla-js"
+    ]
   },
   {
     "name": "Lalbus",
@@ -197,7 +271,11 @@
     "description": "Bus tracking and schedule management web app for University of Dhaka",
     "thumbnail": "/images/projects/lalbus.png",
     "winner": null,
-    "tags": ["php", "mysql", "jquery"]
+    "tags": [
+      "php",
+      "mysql",
+      "jquery"
+    ]
   },
   {
     "name": "VisuQSort",
@@ -213,7 +291,10 @@
     "description": "Visualization on sorting algorithms in an Interactive Android App",
     "thumbnail": "/images/projects/visuQSort.png",
     "winner": null,
-    "tags": ["java", "android"]
+    "tags": [
+      "java",
+      "android"
+    ]
   },
   {
     "name": "Elegant Resume",
@@ -229,7 +310,11 @@
     "description": "Dashboard based web app maker, for non-tech people ",
     "thumbnail": "/images/projects/elegant-resume.png",
     "winner": null,
-    "tags": ["php", "mysql", "jquery"]
+    "tags": [
+      "php",
+      "mysql",
+      "jquery"
+    ]
   },
   {
     "name": "Classic Snake",
@@ -245,7 +330,11 @@
     "description": "ASCII charecter based Snake game in assembly language",
     "thumbnail": "/images/projects/snake.png",
     "winner": null,
-    "tags": ["assembly", "x86", "tasm"]
+    "tags": [
+      "assembly",
+      "x86",
+      "tasm"
+    ]
   },
   {
     "name": "DY Ball",
@@ -261,6 +350,11 @@
     "description": "Clone of famous DX Ball game",
     "thumbnail": "/images/projects/dy-ball.png",
     "winner": null,
-    "tags": ["c", "c++", "graphics", "bgi"]
+    "tags": [
+      "c",
+      "c++",
+      "graphics",
+      "bgi"
+    ]
   }
 ]
