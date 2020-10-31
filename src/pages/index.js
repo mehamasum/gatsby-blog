@@ -1,8 +1,6 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-import { Row, Col } from 'react-bootstrap'
+import { graphql } from 'gatsby'
 import SEO from '../components/seo/SEO'
-import Navbar from '../components/layouts/Navbar'
 
 import avatar from '../assets/images/avatar.jpg'
 import resumeFile from '../assets/files/Resume_Mehedi-Hasan-Masum_CSEDU.pdf'
@@ -18,12 +16,7 @@ class Index extends React.Component {
 
     return (
       <React.Fragment>
-        <SEO
-          article={false}
-          title={`Meha Masum's Resume`}
-          desc={`Mehedi Hasan Masum's profile, software portfolio and personal blog`}
-          pathname={this.props.location.pathname}
-        />
+        <SEO />
 
         <div className="container">
           <div className="my-3">

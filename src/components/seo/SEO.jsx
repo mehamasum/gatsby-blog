@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import Facebook from './Facebook'
-import Twitter from './Twitter'
 
 export default class SEO extends Component {
   render() {
@@ -32,90 +30,26 @@ export default class SEO extends Component {
             },
           } = props
 
-          const seo = {
-            title: title || defaultTitle,
-            description: defaultDescription || desc,
-            image: `${siteUrl}${banner || defaultBanner}`,
-            url: `${siteUrl}${pathname || '/'}`,
-          }
-
-          const realPrefix = pathPrefix === '/' ? '' : pathPrefix
-
-          let schemaOrgJSONLD = [
-            {
-              '@context': 'http://schema.org',
-              '@type': 'WebSite',
-              '@id': siteUrl,
-              url: siteUrl,
-              name: defaultTitle,
-              alternateName: titleAlt || '',
-            },
-          ]
-
-          if (article) {
-            schemaOrgJSONLD = [
-              {
-                '@context': 'http://schema.org',
-                '@type': 'BlogPosting',
-                '@id': seo.url,
-                url: seo.url,
-                name: title,
-                alternateName: titleAlt || '',
-                headline: title,
-                image: {
-                  '@type': 'ImageObject',
-                  url: seo.image,
-                },
-                description: seo.description,
-                datePublished: buildTime,
-                dateModified: buildTime,
-                author: {
-                  '@type': 'Person',
-                  name: author,
-                },
-                publisher: {
-                  '@type': 'Organization',
-                  name: author,
-                  logo: {
-                    '@type': 'ImageObject',
-                    url: siteUrl + realPrefix + logo,
-                  },
-                },
-                isPartOf: siteUrl,
-                mainEntityOfPage: {
-                  '@type': 'WebSite',
-                  '@id': siteUrl,
-                },
-              },
-            ]
-          }
-
           return (
             <React.Fragment>
-              <Helmet title={seo.title}>
-                <html lang={siteLanguage} />
-                <meta name="description" content={seo.description} />
-                <meta name="image" content={seo.image} />
-                <meta name="apple-mobile-web-app-title" content={shortName} />
-                <meta name="application-name" content={shortName} />
-                <script type="application/ld+json">
-                  {JSON.stringify(schemaOrgJSONLD)}
-                </script>
+              <Helmet>
+                <title>Hi, I'm Meha Masum. I'm a software engineer based in Dhaka.</title>
+                <meta name="title" content="Hi, I'm Meha Masum. I'm a software engineer based in Dhaka." />
+                <meta name="description" content="Check out Mehedi Hasan Masum's projects, work experience and more." />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={siteUrl} />
+                <meta property="og:title" content="Hi, I'm Meha Masum. I'm a software engineer based in Dhaka." />
+                <meta property="og:description" content="Check out Mehedi Hasan Masum's projects, work experience and more." />
+                <meta property="og:image" content={`${siteUrl}/meta-img.jpg`} />
+
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content={siteUrl} />
+                <meta property="twitter:title" content="Hi, I'm Meha Masum. I'm a software engineer based in Dhaka." />
+                <meta property="twitter:description" content="Check out Mehedi Hasan Masum's projects, work experience and more." />
+                <meta property="twitter:image" content={`${siteUrl}/meta-img.jpg`} />
               </Helmet>
-              <Facebook
-                desc={seo.description}
-                image={seo.image}
-                title={seo.title}
-                type={article ? 'article' : 'website'}
-                url={seo.url}
-                fbAppId={fbAppId}
-              />
-              <Twitter
-                title={seo.title}
-                image={seo.image}
-                desc={seo.description}
-                username={twitter}
-              />
+
             </React.Fragment>
           )
         }}
