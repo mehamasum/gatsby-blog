@@ -33,7 +33,13 @@ class BlogList extends React.Component {
 
             <GlobalStyle theme={theme} />
 
-            <Navbar location={this.props.location} />
+            <Navbar
+              location={this.props.location}
+              style={{
+                background: theme.primary.background,
+                color: theme.primary.text.normal,
+              }}
+            />
 
             <div>
               <div

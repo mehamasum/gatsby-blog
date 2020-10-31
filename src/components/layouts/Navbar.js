@@ -25,7 +25,9 @@ class Navbar extends React.Component {
   render() {
     const { location } = this.props
     return (
-      <header className="header">
+      <header className="header" style={{
+        ...this.props.style,
+      }}>
         <div className="container">
           <div className="nav-links">
             {links.map(link => (
