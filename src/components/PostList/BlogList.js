@@ -10,42 +10,11 @@ import { ThemeContext } from '../ThemeContextWrapper'
 import Switch from 'react-switch'
 import GlobalStyle from '../styles/Global'
 import '../../styles/index.scss'
-import AllCategories from '../widgets/AllCategories'
 import Footer from '../layouts/Footer'
 import Emoji from '../Emoji'
 import Navbar from '../../components/layouts/Navbar'
 
 class BlogList extends React.Component {
-  constructor(props) {
-    super(props)
-
-    let nativeHiddenPreference = false
-    try {
-      nativeHiddenPreference = localStorage.getItem('nativeHidden')
-    } catch (err) {
-      // Ignore.
-    }
-
-    this.state = {
-      nativeHidden: nativeHiddenPreference === 'true' ? true : false,
-    }
-    this.toggleNative = this.toggleNative.bind(this)
-  }
-
-  toggleNative() {
-    this.setState(state => {
-      const hidden = !state.nativeHidden
-      try {
-        localStorage.setItem('nativeHidden', hidden)
-      } catch (err) {
-        // Ignore.
-      }
-      return {
-        nativeHidden: hidden,
-      }
-    })
-  }
-
   render() {
     const { data } = this.props
     const { blogTitle, blogSlogan, author } = data.site.siteMetadata
@@ -102,9 +71,6 @@ class BlogList extends React.Component {
                         />
                       </div>
 
-                      <AllCategories />
-                      <hr />
-
                       <TagCloud />
                       <hr />
 
@@ -115,23 +81,9 @@ class BlogList extends React.Component {
                       <section style={{ margin: '2em 0' }}>
                         {this.props.topContent ? this.props.topContent : null}
 
-                        <label>
-                          <input
-                            type="checkbox"
-                            checked={this.state.nativeHidden}
-                            onChange={this.toggleNative}
-                          />{' '}
-                          Hide non-english posts
-                        </label>
-
                         {this.props.topContent ? <hr /> : null}
 
                         {posts
-                          .filter(post =>
-                            this.state.nativeHidden
-                              ? post.node.frontmatter.category !== 'Native'
-                              : post
-                          )
                           .map(post => {
                             return (
                               <article

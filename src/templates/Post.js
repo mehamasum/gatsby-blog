@@ -69,10 +69,7 @@ class BlogPostTemplate extends React.Component {
               margin: '1em 0 2em',
             }}
           >
-            {post.frontmatter.date} in{' '}
-            <Link to={`/blog/categories/${post.frontmatter.category}`}>
-              {post.frontmatter.category}
-            </Link>
+            {post.frontmatter.date}
             {` • ${post.timeToRead} min read`}
           </div>
         </div>
@@ -160,7 +157,6 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         tags
-        category
         thumbnail
         spoiler
       }

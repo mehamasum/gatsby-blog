@@ -1,7 +1,6 @@
 ---
 title: "OS/161: Paint Shop Synchronization Problem"
 date: '2016-06-26T18:00:00.000Z'
-category: 'Academic'
 tags: ['os161']
 thumbnail: 'https://mehamasum.files.wordpress.com/2016/06/paintshop.png'
 spoiler: "Ideas (and code) to solve OS/161 Coding Assignment Part 3: Paint shop synchronization."

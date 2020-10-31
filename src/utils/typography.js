@@ -1,4 +1,3 @@
-/*
 import Typography from 'typography'
 import theme from 'typography-theme-wordpress-2014'
 
@@ -34,5 +33,3 @@ if (process.env.NODE_ENV !== 'production') {
 export default typography
 export const rhythm = typography.rhythm
 export const scale = typography.scale
-
-*/

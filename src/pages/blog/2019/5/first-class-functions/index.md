@@ -1,7 +1,6 @@
 ---
 title: First-Class Functions - পাইথনে ক্লিন কোড
 date: '2019-05-27T12:01:01.087Z'
-category: 'Native'
 tags: ['python']
 thumbnail: '/images/posts/py.png'
 spoiler: First-Class Functions কি এবং কেন- উদাহরণ ও অনুশীলন।
@@ -256,9 +255,5 @@ Output:
 - [Higher Order Functions and Currying](https://www.geeksforgeeks.org/higher-order-functions-currying/)
 
 আজ এ পর্যন্তই। সামনের পর্বে অন্য কিছু নিয়ে কথা হবে, সে পর্যন্ত ভালো থাকো।
-
----
-
-> Adapted from an [ongoing book](/books) of the writer
 
 ---

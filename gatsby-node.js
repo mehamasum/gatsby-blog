@@ -2,9 +2,6 @@ const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
 const BlogListTemplate = path.resolve('./src/templates/BlogListTemplate.js')
-const ListCategoryTemplate = path.resolve(
-  './src/templates/ListCategoryTemplate.js'
-)
 const ListTagTemplate = path.resolve('./src/templates/ListTagTemplate.js')
 
 const buildQuery = `
@@ -25,7 +22,6 @@ const buildQuery = `
           date(formatString: "MMMM DD, YYYY")
           title
           tags
-          category
           thumbnail
           spoiler
         }
@@ -60,15 +56,11 @@ exports.createPages = ({ graphql, actions }) => {
         const posts = result.data.allMarkdownRemark.edges
 
         let tagCount = {}
-        let catCount = {}
 
         posts.forEach((post, index) => {
           post.node.frontmatter.tags.forEach(tag => {
             tagCount[tag] = (tagCount[tag] || 0) + 1
           })
-
-          const cat = post.node.frontmatter.category
-          catCount[cat] = (catCount[cat] || 0) + 1
 
           const previous =
             index === posts.length - 1 ? null : posts[index + 1].node
@@ -95,15 +87,7 @@ exports.createPages = ({ graphql, actions }) => {
           })
         })
 
-        // Category pages
-        Object.keys(catCount).forEach(cat => {
-          generateListPages(
-            createPage,
-            `/blog/categories/${cat}`,
-            ListCategoryTemplate,
-            { category: cat }
-          )
-        })
+        // TODO all tags page
       })
     )
   })

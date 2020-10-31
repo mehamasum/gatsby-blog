@@ -5,9 +5,8 @@ import BlogList from '../components/PostList/BlogList'
 const ListTagTemplate = props => {
   const { tag } = props.pageContext
   const { totalCount } = props.data.allMarkdownRemark
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? '' : 's'
-  } tagged with "${tag}"`
+  const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'
+    } tagged with "${tag}"`
 
   return (
     <BlogList
@@ -53,7 +52,6 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             tags
-            category
             thumbnail
             spoiler
           }

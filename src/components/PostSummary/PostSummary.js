@@ -14,10 +14,7 @@ class Summary extends React.Component {
         </h1>
 
         <small>
-          {post.frontmatter.date} in{' '}
-          <Link to={`/blog/categories/${post.frontmatter.category}`}>
-            {post.frontmatter.category}
-          </Link>
+          {post.frontmatter.date}
           {` • ${post.timeToRead} min read`}
         </small>
 
