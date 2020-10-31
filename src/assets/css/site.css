@@ -68,3 +68,7 @@ a:hover {
 .left-icon {
   margin-right: 0.5rem;
 }
+
+.switchIcon {
+  padding: 3px;
+}
